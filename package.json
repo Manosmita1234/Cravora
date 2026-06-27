@@ -1,0 +1,28 @@
+{
+  "targets": {
+    "default": {
+      "context": "browser"
+    }
+  },
+  "name": "food-delivery-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Manosmita Sahu",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.1",
+    "dom": "^0.0.3",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router": "^7.17.0",
+    "tailwindcss": "^4.3.1"
+  }
+}
