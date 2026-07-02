@@ -2,7 +2,8 @@ import React from "react"
 import { useState, useEffect } from "react";
 import restaurants from "../../utils/mockData";
 import useOnlineStatus from "../../utils/useOnlineStatus";
-import RestaurantMenu from "./restaurantMenu";
+import RestaurantMenu from "./retaurantMenu";
+import { Link } from "react-router";
 
 
 const RestaurantCard = ({ restaurant }) => {
@@ -42,10 +43,11 @@ const RestaurantContainer = ({ listOfRestaurants }) => {
             {
                 listOfRestaurants.map((restaurant) => (
 
-                    <RestaurantCard
-                        key={restaurant.info.id}
-                        restaurant={restaurant}
-                    />
+                    <Link 
+                    key={restaurant.info.id}
+                    to={`/restaurant/${restaurant.info.id}`}>
+    <RestaurantCard restaurant={restaurant} />
+</Link>
 
                 ))
             }
@@ -80,9 +82,10 @@ const Main = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://corsproxy.io/?url=https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.4667705&lng=85.8956381&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-      );
+                "https://corsproxy.io/?url=https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.4667705&lng=85.8956381&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 
+      );
+      console.log(response);
       const json = await response.json();
 
 
@@ -111,6 +114,7 @@ const onlineStatus = useOnlineStatus();
 if (onlineStatus === false) {
     return <h1>Looks like you are offline, check internet connection</h1>;
 }
+console.log(listOfRestaurants.map(res => res.info.id));
 
     return (
         <div className="main">
