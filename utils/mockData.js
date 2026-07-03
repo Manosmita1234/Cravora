@@ -366,24 +366,28 @@ export const menu = {
           id: "d5",
           name: "Veg Extravaganza",
           price: 429,
+          isVeg: true,
           description: "Black olives, capsicum, onion, mushrooms, corn and jalapenos."
         },
         {
           id: "d6",
           name: "Peppy Paneer",
           price: 379,
+          isVeg: true,
           description: "Paneer, capsicum and red paprika."
         },
         {
           id: "d7",
           name: "Mexican Green Wave",
           price: 389,
+          isVeg: true,
           description: "Crunchy onions, capsicum, tomatoes and jalapenos."
         },
         {
           id: "d8",
           name: "Cheese n Corn",
           price: 299,
+          isVeg: true,
           description: "Golden corn with mozzarella cheese."
         }
       ]

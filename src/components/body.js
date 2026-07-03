@@ -6,7 +6,7 @@ import RestaurantMenu from "./retaurantMenu";
 import { Link } from "react-router";
 
 
-const RestaurantCard = ({ restaurant }) => {
+ export const RestaurantCard = ({ restaurant }) => {
 
     const info = restaurant.info;
 

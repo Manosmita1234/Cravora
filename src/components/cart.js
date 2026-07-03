@@ -11,7 +11,7 @@ const Cart = ()=>{
     };
 
     return(
-        <div><h1>Cart</h1>
+        <div><h1 className="text-3xl text-center font-bold">Cart</h1>
         <button className="p-4 border-2 m-2 bg-gray-200 "
         onClick={handleClearCart}>clear cart</button>
         <div>
